@@ -1,0 +1,13 @@
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}${DB_CONN_PROP:?initialSize=10&maxSize=10&acquireRetry=10&maxCreateConnectionTime=PT2S&maxAcquireTime=PT2.5S&maxIdleTime=PT180S&poolName=db-pool}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+  liquibase:
+    enabled: true
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}
+    user: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+application:
+    joke-service:
+      base-url: ${JOKE_SERVICE_BASE_URL:https://official-joke-api.appspot.com}
