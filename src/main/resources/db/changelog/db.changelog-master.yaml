@@ -1,3 +1,4 @@
 databaseChangeLog:
   - include: { relativeToChangelogFile: true, file: init.sql }
   - include: { relativeToChangelogFile: true, file: release_1_0_1__change_created_at_type.sql }
+  - include: { relativeToChangelogFile: true, file: release_1_0_2_init_users.sql }
